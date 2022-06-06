@@ -24,8 +24,8 @@ jobs:
       run: ./configure
       
     - name: Install dependencies
-      run: make
+      run: make build
       
     - name: Run check
-      run: make build
+      run: make push
   
