@@ -4,12 +4,12 @@ LABEL org.opencontainers.image.authors="Rob Thomas <xrobau@gmail.com>"
 ARG LANG_LANGUAGE=en
 ARG LANG_COUNTRY=US
 ENV LANG=${LANG_LANGUAGE}_${LANG_COUNTRY}.UTF-8
-ENV MYSQL_DRIVER_VERSION=8.0.28
+ENV MYSQL_DRIVER_VERSION=5.1.44
 
 # Import mysql driver used by everything
 RUN curl -L http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-${MYSQL_DRIVER_VERSION}.tar.gz | \
 	tar --directory=/usr/local --strip-components=1 -zxv \
-	mysql-connector-java-${MYSQL_DRIVER_VERSION}/mysql-connector-java-${MYSQL_DRIVER_VERSION}.jar
+	mysql-connector-java-${MYSQL_DRIVER_VERSION}/mysql-connector-java-${MYSQL_DRIVER_VERSION}-bin.jar
 
 # Build fernflower
 RUN git clone https://github.com/fesh0r/fernflower /usr/local/fernflower && \
