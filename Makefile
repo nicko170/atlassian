@@ -111,7 +111,7 @@ shell: | setup
 	@docker exec -it $(PROJECT)_$(DEFAULT)_1 bash
 
 .PHONY: build
-build: jira crowd confluence bitbucket | setup
+build: jira crowd confluence bitbucket
 
 .docker_base_build: $(wildcard base/*)
 	@docker build --tag atlassian-base:latest base/
