@@ -46,7 +46,7 @@ RUN mkdir -p ${CROWD_INSTALL}/crowd-webapp/WEB-INF/classes && \
     mkdir -p ${CROWD_INSTALL}/apache-tomcat/webapps/ROOT && \
     mkdir -p ${CROWD_INSTALL}/apache-tomcat/conf/Catalina/localhost && \
     rm -f ${CROWD_INSTALL}/apache-tomcat/lib/mysql-connector-java*.jar &&  \
-    cp /usr/local/mysql-connector-java-*-bin.jar \
+    cp /usr/local/mysql-connector-java-*.jar \
       ${CROWD_INSTALL}/apache-tomcat/lib/ && \
     mv ${CROWD_INSTALL}/apache-tomcat/webapps/ROOT ${CROWD_INSTALL}/splash-webapp && \
     mv ${CROWD_INSTALL}/apache-tomcat/conf/Catalina/localhost/* ${CROWD_INSTALL}/webapps && \
