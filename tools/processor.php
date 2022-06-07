@@ -1,18 +1,6 @@
-#!/usr/bin/php
 <?php
 
-// This is only valid for use IN AUSTRALIA, under Section 47D of the
-// Copyright Act. You must ensure:
-//
-// (i) The program is made from a legitimate copy;
-// (ii) Copying is for the purpose of obtaining information to make independently another program or article to connect to and be used together with or otherwise interoperate with the original;
-// (iii) Copying is only to the extent reasonably necessary;
-// (iv) The extent of reproduction or adaptation of the original program must be limited to that required to enable the new program to connect to, or otherwise interoperate with, the original program;
-// (v) The information referred to above is not readily available is not readily available when the reproduction or adaptation is made.
-//
-// YOU MUST NOT use this program to alter your allocations!
-// You should only use this to update your 
-//
+// THIS SCRIPT IS USED FOR EDUCATIONAL PURPOSES ONLY. DO NOT USE IT IN ILLEGAL WAY!!!
 
 namespace AtlassianKeygen;
 
