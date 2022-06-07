@@ -28,7 +28,7 @@ function patchJar() {
 	sed -E -i \
 		-e '/return properties;/i// Force Recent MED\n\tproperties.setProperty("MaintenanceExpiryDate", "2029-01-01");' \
 		-e '/import org.apache/i import java.util.Map;' \
-		-e '/return properties;/i // XXXDebug\nMap<String, String> env = System.getenv();\nfor (String envName : env.keySet()) {\n if (envName.startsWith("EXTRAS_")) {\n  System.out.format("DEBUG: --- Setting %s to %s%n", envName.substring(envName.indexOf("_")+1).replace('-','.'),env.get(envName));\n properties.setProperty(envName.substring(envName.indexOf("_")+1).replace('-','.'),env.get(envName)); }\n}' \
+		-e '/return properties;/i // XXXDebug\nMap<String, String> env = System.getenv();\nfor (String envName : env.keySet()) {\n if (envName.startsWith("EXTRAS_")) {\n  System.out.format("DEBUG: --- Setting %s to %s%n", envName.replace('-','.').substring(envName.indexOf("_")+1),env.get(envName));\n properties.setProperty(envName.replace('-','.').substring(envName.indexOf("_")+1),env.get(envName)); }\n}' \
         	${PATCHEDJAVA}
 #       return envVarKey.substring(envVarKey.lastIndexOf("_") + 1);
 	cd $(dirname $JARFILE)
