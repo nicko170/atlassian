@@ -170,12 +170,8 @@ function processCatalinaDefaultConfiguration() {
     sed -i "/export CATALINA_OPTS/d" ${PKG_INSTALL}/bin/setenv.sh
     sed -i "/CATALINA_OPTS=/d" ${PKG_INSTALL}/bin/setenv.sh
     echo 'CATALINA_OPTS="-Dconfluence.document.conversion.fontpath=/usr/share/fonts/truetype/msttcorefonts ${CATALINA_OPTS}"
-CATALINA_OPTS="-XX:-PrintGCDetails ${CATALINA_OPTS}"
-CATALINA_OPTS="-XX:+PrintGCDateStamps ${CATALINA_OPTS}"
-CATALINA_OPTS="-XX:-PrintTenuringDistribution ${CATALINA_OPTS}"
+CATALINA_OPTS="-Xlog:gc* ${CATALINA_OPTS}"
 CATALINA_OPTS="-Xloggc:$LOGBASEABS/logs/gc-`date +%F_%H-%M-%S`.log ${CATALINA_OPTS}"
-CATALINA_OPTS="-XX:+UseGCLogFileRotation ${CATALINA_OPTS}"
-CATALINA_OPTS="-XX:NumberOfGCLogFiles=5 ${CATALINA_OPTS}"
 CATALINA_OPTS="-XX:G1ReservePercent=20 ${CATALINA_OPTS}"
 CATALINA_OPTS="-Djava.awt.headless=true ${CATALINA_OPTS}"
 CATALINA_OPTS="-Datlassian.plugins.enable.wait=300 ${CATALINA_OPTS}"
