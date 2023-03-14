@@ -12,12 +12,7 @@ RUN curl -L http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-
 	mysql-connector-java-${MYSQL_DRIVER_VERSION}/mysql-connector-java-${MYSQL_DRIVER_VERSION}-bin.jar
 
 # Build fernflower
-RUN git clone https://github.com/fesh0r/fernflower /usr/local/fernflower && \
-    cd /usr/local/fernflower && \
-    ./gradlew build && \
-    ./gradlew --stop && \
-    cp build/libs/fernflower.jar /usr/local/bin/ && \
-    cd / && rm -rf /usr/local/fernflower
+COPY fernflower.jar /usr/local/bin/
 
 # Now add all the things we want in the other packages
 RUN apt-get update && apt-get -y upgrade && \
