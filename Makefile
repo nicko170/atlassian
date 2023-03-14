@@ -1,13 +1,13 @@
 # Things you may want to change:
 #   Suffix of the tag used when pushing to the docker hub
-TAGSUFFIX=-5
+TAGSUFFIX=-6
 
 # Prefix for the dockerhub. If you're pushing to your own, change
 # this - eg if you use HUBDEST=hub.example.com/awesome the
 # tags will be:
 #    hub.example.com/awesome/jira-patched:8.22.2-1
 # (Assuming TAGSUFFIX is -1 and JIRA_VERSION is 8.22.2)
-HUBDEST=nick170
+HUBDEST=ghcr.io/nicko170
 
 # Default container to tail or enter when 'make start' or 'make shell' is run
 DEFAULT=crowd
